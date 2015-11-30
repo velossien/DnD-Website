@@ -1,6 +1,8 @@
-$(document).ready(randomize());
+$(document).ready(function(){
+ randomizePotion();
+});
 
-function randomize(){
+function randomizePotion(){
 	var potion = potionGen();
 	var randoPotion = $(".randoPotion");
 	randoPotion.text(potion);
@@ -12,6 +14,5 @@ function potionGen() {
 	for (i=0; i<5; i++) {
 		bubbly.push(potionsPoisons[Math.floor(Math.random() * potionsPoisons.length)]);
 	}
-	
 	return bubbly;	    
 }
